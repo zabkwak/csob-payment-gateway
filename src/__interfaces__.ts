@@ -38,6 +38,8 @@ export enum PaymentStatus {
 	DECLINED = 6,
 	WAITING_FOR_SETTLE = 7,
 	COMPLETED = 8,
+	WAITING_FOR_REFUND = 9,
+	REFUND_COMPLETED = 10,
 }
 
 // #region RESPONSES
