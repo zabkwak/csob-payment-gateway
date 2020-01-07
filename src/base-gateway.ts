@@ -128,6 +128,8 @@ export default abstract class Gateway {
 		}
 		const { url, merchantId } = this._options;
 		const dttm = this._createDttm();
+		const apiUrl = `${url}/api/${this.getVersion()}${endpoint}${createGetPath && method === 'get' ? this._createGetPath({ merchantId, ...data }, dttm) : ''}`;
+		console.log(apiUrl);
 		return new Promise((resolve, reject) => {
 			request[method]({
 				body: method !== 'get' ? {
@@ -139,7 +141,7 @@ export default abstract class Gateway {
 				gzip: true,
 				json: true,
 				qs: method === 'get' ? data : undefined,
-				url: `${url}/api/${this.getVersion()}${endpoint}${createGetPath && method === 'get' ? this._createGetPath({ merchantId, ...data }, dttm) : ''}`,
+				url: apiUrl,
 			}, (err, res, body) => {
 				if (err) {
 					reject(err);

@@ -6,8 +6,13 @@ import {
 	IPaymentInitResponse,
 	IPaymentRefundResponse,
 	IPaymentStatusResponse,
+	PaymentStatus,
 } from '../__interfaces__';
 import Base, { Currency, Language, PayOperation } from '../base-gateway';
+
+export {
+	PaymentStatus,
+};
 
 export default class Gateway extends Base {
 
@@ -66,7 +71,7 @@ export default class Gateway extends Base {
 	}
 
 	public paymentStatus(payId: string): Promise<IPaymentStatusResponse> {
-		return this._request('get', '/payment/status', { payId });
+		return this._request('get', '/payment/status', { payId/*, extensions: ['maskClnRP']*/ });
 	}
 
 	public paymentRefund(payId: string, amount?: number): Promise<IPaymentRefundResponse> {

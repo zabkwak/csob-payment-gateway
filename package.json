@@ -3,6 +3,7 @@
 	"version": "0.1.2",
 	"description": "Node.js implementation of CSOB payment gateway.",
 	"main": "index.js",
+	"types": "./dist/index.d.ts",
 	"scripts": {
 		"create_index": "run-script-os",
 		"create_index:win32": "echo module.exports = require('./dist'); > index.js",

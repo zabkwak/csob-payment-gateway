@@ -6,8 +6,13 @@ import {
 	IOneClickStartResponse,
 	IPaymentInitResponse,
 	IPaymentStatusResponse,
+	PaymentStatus,
 } from '../__interfaces__';
 import Base, { Currency, Language, PayOperation } from '../base-gateway';
+
+export {
+	PaymentStatus,
+};
 
 export default class Gateway extends Base {
 
