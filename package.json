@@ -1,6 +1,6 @@
 {
 	"name": "csob-payment-gateway",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Node.js implementation of CSOB payment gateway.",
 	"main": "index.js",
 	"types": "./dist/index.d.ts",
