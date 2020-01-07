@@ -1,0 +1,6 @@
+/node_modules
+/dist
+/index.js
+
+/__tests__/certs
+/package-lock.json
