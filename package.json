@@ -1,6 +1,6 @@
 {
 	"name": "csob-payment-gateway",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Node.js implementation of CSOB payment gateway.",
 	"main": "index.js",
 	"scripts": {
@@ -29,6 +29,19 @@
 	"engines": {
 		"node": ">=4"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zabkwak/csob-payment-gateway.git"
+	},
+	"bugs": {
+		"url": "https://github.com/zabkwak/csob-payment-gateway/issues"
+	},
+	"homepage": "https://github.com/zabkwak/csob-payment-gateway#readme",
+	"keywords": [
+		"csob",
+		"payment",
+		"gateway"
+	],
 	"dependencies": {
 		"http-smart-error": "^3.0.0",
 		"moment": "^2.24.0",
