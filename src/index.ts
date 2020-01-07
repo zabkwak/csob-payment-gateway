@@ -1,3 +1,7 @@
-import Gateway from './v1.7';
+import Gateway, { PaymentStatus } from './v1.7';
+
+export {
+	PaymentStatus,
+};
 
 export default Gateway;
